@@ -69,10 +69,11 @@ body{
 
 
 .detail-component p{
-    max-width: 350px;
+    max-width: 300px;
     padding-bottom:2rem ;
     color: hsl(235, 18%, 26%);
     font-weight: 400;
+    font-size: 15px;
     
  
     
@@ -93,9 +94,12 @@ body{
 }
 
 
+/*ทำปุ่มเป็นหลัก*/
+
 .button2{
-    width: 350px;
+    border: 350px;
     height: 50px;
+    width: 300px;
     background-color:  hsl(4, 100%, 67%);
     cursor: pointer;
     border-radius: 10px;
