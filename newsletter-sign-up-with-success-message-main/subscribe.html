@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscribe Page</title>
-    <link rel="stylesheet" href="subscrib.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscribe Page</title>
+  <link rel="stylesheet" href="subscrib.css">
+  <script src="inpu.js"></script>
 </head>
 <body>
 
-    <div class="container">
+  <div class="container">
 
-        <div class="card">
+    <div class="card">
 
+      <div class="icon">
+        <img src="./assets/images/icon-success.svg">
+      </div>
 
-            <div class="icon">
-                <img src="./assets/images/icon-success.svg">
-            </div>
-
-            <div class="text-component">
-                <div class="Header-text">
-
-                    <h1>Thanks for
-                        <br>Subscribing!
-                    </h1>
-
-                </div>
-
-                <div class="detail-component">
-                    <p>A confirmation email has been sent to
-                        ...;.......   Please open it and click
-                        the button inside to confirm you subscription
-                    </p>
-               
-                </div>
-            </div>
-                
-           <div class="button-component">
-                <button class="button2">Dismiss message</button>
-           </div>
-
+      <div class="text-component">
+        <div class="Header-text">
+          <h1>Thanks for<br>Subscribing!</h1>
         </div>
 
+        <div class="detail-component">
+          <p>A confirmation email has been sent to <span id="emailValue" class="spaning"></span>. Please open it and click the button inside to confirm your subscription.</p>
+        </div>
+      </div>
+
+      <div class="button-component">
+        <button class="button2">Dismiss message</button>
+      </div>
 
     </div>
 
+  </div>
 
+  <script>
+    // Retrieve email value from URL query parameter
+    var urlParams = new URLSearchParams(window.location.search);
+    var email = urlParams.get('email');
     
+    // Update email value in HTML
+    var emailValueElement = document.getElementById('emailValue');
+    emailValueElement.textContent = email;
+  </script>
+
 </body>
 </html>

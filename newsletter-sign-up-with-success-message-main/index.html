@@ -15,6 +15,7 @@
   </style>
 
   <script src="./checker.js"></script>
+  <script src="./input.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -58,16 +59,15 @@
 
             <div class="typebar">
               <h5>Email address</h5>
-              <input placeholder="email@company">
+              <input id="emailInput" type="email" placeholder="email@company">
             </div>
 
           </form>
         
 
-          
+          <!-- ทำการเพิ่ม Event ลงไปใน button1 -->
           <div class="button-component">
-            <button class="button1" type="submit" name="submit" value="submit" onclick="return CheckerEmail()">Subscribe to monthly newsletter!</button>
-            
+            <button class="button1" type="submit" name="submit" value="submit" onclick="return CheckerEmail(event)">Subscribe to monthly newsletter!</button>
           </div>
 
 
@@ -90,17 +90,5 @@
 </html>
 
 
-<!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  <!-- Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message -->
-
-  <!-- Success message end -->
   
  
